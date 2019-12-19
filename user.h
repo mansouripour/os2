@@ -24,8 +24,8 @@ char* sbrk(int);
 int sleep(int);
 int uptime(void);
 //
-int getChild(void);//void????int????
-int getCount(void);//
+int getChild(int);//void????int????use by user
+int getCount(int);//first int ?? list?
 
 // ulib.c
 int stat(const char*, struct stat*);
