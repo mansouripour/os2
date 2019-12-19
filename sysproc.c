@@ -89,3 +89,15 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+
+//////////////////
+int sys_getChild(void)
+{
+  //
+  
+}
+int sys_getCount(void)
+{
+  //
+}
