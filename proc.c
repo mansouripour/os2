@@ -533,7 +533,7 @@ procdump(void)
   }
 }
 
-
+//inja bayad bashe ya sysproc.c?
 //int processID
 //getting children's id of a process
 int
