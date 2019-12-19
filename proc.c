@@ -532,3 +532,33 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+
+//int processID
+//getting children's id of a process
+int
+getChild()//tosh?
+{
+int a = 0,childID;
+int i = 1;
+struct proc *p;
+acquire(&ptable.lock);
+for(p = ptable.proc; p < &ptable.proc[NPROC];p++){
+i++;
+//if(p->ppid == processID){
+//childID = p->pid;
+  }    
+return i;
+}
+
+
+
+/*
+//getting number of system calls of a system call
+int
+getCount(int)
+{
+/////////////////////////codes lots of codes:)
+return 23;
+}
+*/
