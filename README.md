@@ -1,6 +1,8 @@
 # os2
 test
+
 getChild:
+
 this system call gets PID of a process and returns process ids of its children.when the process has more than on child,this system call
 should return a multi-digit number.and the order does not matter in this multi-digit number.for example,suppose your current process has
 two children andthe first childand the second have PID 6 and 7,respectively.this system call should return 67 or 76 as an output.for 
