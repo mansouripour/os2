@@ -6,6 +6,7 @@
 #include "x86.h"
 #include "proc.h"
 #include "spinlock.h"
+#include "math.h"
 
 struct {
   struct spinlock lock;
@@ -537,16 +538,15 @@ procdump(void)
 //int processID
 //getting children's id of a process
 int
-getChild()//tosh?
+getChild(int PID)
 {
-  int a = 0,childID;
-  int i = 1;
+  int i = 0,childrenID;
   struct proc *p;
   acquire(&ptable.lock);
   for(p = ptable.proc; p < &ptable.proc[NPROC];p++){
-    i++;
-    //if(p->ppid == processID){
-    //childID = p->pid;
+    if(p->ppid == PID){
+    childrenID = p->pid;
+    i = i*100 + cheldrenID;
   }    
   return i;
 }
