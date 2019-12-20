@@ -94,34 +94,14 @@ sys_uptime(void)
 //////////////////
 
 
-int                               //int processID
-getChild(int)                     //getting children's id of a process if=int??//nemedonam:/secound int?
-{
-  int a = 0,childID;
-  int i = 1;
-  struct proc *p;
-  acquire(&ptable.lock);
-  for(p = ptable.proc; p < &ptable.proc[NPROC];p++){
-    i++;
-    //if(p->ppid == processID){
-    //childID = p->pid;
-  }    
-  return i;
-}
-
-
-
-
-//getting number of system calls of a system call
-//return process ids of its children
 int
-getCount(int)
+sys_getChild(int)
 {
-  /////////////////////////codes lots of codes:)
-  struct proc *p;
-  acquire(&ptable.lock);
-  for(p = ptable.proc; p < &ptable.proc[NPROC];p++){
-  }
+  return getChild();
 }
 
-
+int
+sys_getCount(int)
+{
+  return getCount();
+}
