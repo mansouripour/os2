@@ -111,7 +111,7 @@ getChild(int)                     //getting children's id of a process if=int??/
 
 
 
-/*
+
 //getting number of system calls of a system call
 //return process ids of its children
 int
@@ -123,5 +123,5 @@ getCount(int)
   for(p = ptable.proc; p < &ptable.proc[NPROC];p++){
   }
 }
-*/
+
 
